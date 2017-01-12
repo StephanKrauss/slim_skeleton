@@ -1,0 +1,4 @@
+vendor/
+git.lock
+.idea/
+.git/
