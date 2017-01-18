@@ -1,0 +1,9 @@
+{
+    "methodCalls": [
+        {
+            "class": "\\Pimple\\Container",
+            "method": "offsetGet",
+            "position": 0
+        }
+    ]
+}

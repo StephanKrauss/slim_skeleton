@@ -1,0 +1,72 @@
+[
+    {
+        "name": "App\\Model\\Part1",
+        "type": "class",
+        "value": "App\\Model\\Part1"
+    },
+    {
+        "name": "App\\Model\\Part2",
+        "type": "class",
+        "value": "App\\Model\\Part2"
+    },
+    {
+        "name": "callableResolver",
+        "type": "class",
+        "value": "Slim\\CallableResolver"
+    },
+    {
+        "name": "config",
+        "type": "array",
+        "value": ""
+    },
+    {
+        "name": "environment",
+        "type": "class",
+        "value": "Slim\\Http\\Environment"
+    },
+    {
+        "name": "errorHandler",
+        "type": "class",
+        "value": "Slim\\Handlers\\Error"
+    },
+    {
+        "name": "foundHandler",
+        "type": "class",
+        "value": "Slim\\Handlers\\Strategies\\RequestResponse"
+    },
+    {
+        "name": "notAllowedHandler",
+        "type": "class",
+        "value": "Slim\\Handlers\\NotAllowed"
+    },
+    {
+        "name": "notFoundHandler",
+        "type": "class",
+        "value": "Slim\\Handlers\\NotFound"
+    },
+    {
+        "name": "phpErrorHandler",
+        "type": "class",
+        "value": "Slim\\Handlers\\PhpError"
+    },
+    {
+        "name": "request",
+        "type": "class",
+        "value": "Slim\\Http\\Request"
+    },
+    {
+        "name": "response",
+        "type": "class",
+        "value": "Slim\\Http\\Response"
+    },
+    {
+        "name": "router",
+        "type": "class",
+        "value": "Slim\\Router"
+    },
+    {
+        "name": "settings",
+        "type": "class",
+        "value": "Slim\\Collection"
+    }
+]
