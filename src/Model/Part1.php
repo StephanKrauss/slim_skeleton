@@ -18,11 +18,23 @@
 	{
 		protected $container;
 
+
+		/** @var array */
+		public $data = array(
+			'aaa' => 111,
+			'bbb' => 'abc',
+			'ccc' => array(
+				'xxx' => 'xxx',
+				'yyy' => 'yyy',
+				'zzz' => 'zzz'
+			)
+		);
+
 		public function __construct() {
 			// $this->container = $container;
 		}
 
-		public function methode1(){
+		public function methode1($aaa, $bbb, $ccc){
 
 		}
 

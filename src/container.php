@@ -27,5 +27,6 @@
 	// Service
 
 	// Manually (in the end of script!)
-	$dumper = new PimpleDumper();
-	$dumper->dumpPimple($container, true); // Create new pimple.json
+	// $dumper = new PimpleDumper();
+	// $dumper->dumpPimple($container); // Create new pimple.json
+	// $dumper->dumpPhpstorm($container);

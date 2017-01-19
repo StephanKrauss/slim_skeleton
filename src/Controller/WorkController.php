@@ -21,9 +21,28 @@
 		public function __construct(\Slim\Container $container) {
 			$this->container = $container;
 
-			$bla = $container[\App\Model\Part2::class]->methode1();
+			/** @var $dataModel1 \App\Model\Part1::class */
+			$dataModel1 = $container[\App\Model\Part1::class];
 
-			$test = $container['config'];
+			foreach($dataModel1->data as $key => $value){
+				if($key == 'aaa'){
+					$wert = 'aaa';
+				}
+			}
+			$dataModel1->data['new1'] = 'new1';
+			$dataModel1->data['new2'] = 'new2';
+
+			$test = 123;
+
+			// $dataModel1->data[]
+
+
+
+
+
+			// $container[\App\Model\Part1::class]->methode1($aaa, $bbb, $ccc);
+
+			$test = 123;
 		}
 
 		public function part1Action(){
