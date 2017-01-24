@@ -16,7 +16,8 @@
 	$container = $app->getContainer();
 	include_once('../src/container.php');
 
-	$app->any('/[{controller}/{action}/]', function (Request $request, Response $response, $params) use($container) {
+	$app->any('/[{controller}/{action}/]', function (Request $request, Response $response, $params) use($container)
+	{
 	    $controllerName = $params['controller'].'Controller';
 	    $controllerName = ucfirst($controllerName);
 	    $controllerName = '\\App\\Controller\\'.$controllerName;
@@ -27,7 +28,7 @@
 	    $actionName = $actionName.'Action';
 	    $controller->$actionName();
 
-	    return $response;
+	     return $response;
 	});
 
 	$app->run();

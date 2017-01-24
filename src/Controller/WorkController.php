@@ -33,4 +33,19 @@
 
 		}
 
+		public function templateAction(){
+			try{
+				// Start Transaktion
+
+				$view = $this->container['view'];
+
+				$test = 123;
+
+				// Commit
+			} catch(Exception $e){
+				// Rollback
+				throw $e;
+			}
+		}
+
 	} // end class
