@@ -41,7 +41,18 @@
 
 				$test = 123;
 
+				// Service Person
+				$person = array(
+					'name' => 'Krauss',
+					'firstName' => 'Stephan'
+				);
+
 				// Commit
+
+				// Montagepunkt
+				$result = array();
+
+				$result['person'] = $person;
 			} catch(Exception $e){
 				// Rollback
 				throw $e;

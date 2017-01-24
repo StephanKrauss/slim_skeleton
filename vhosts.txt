@@ -1,0 +1,25 @@
+NameVirtualHost *:80
+
+<VirtualHost *:80>
+    DocumentRoot C:/xampp/htdocs
+    ServerName localhost
+
+	<Directory C:/xampp/htdocs>
+        DirectoryIndex index.php
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot C:/xampp/htdocs/eric_install/public
+    ServerName www.eric_install.de
+
+	<Directory C:/xampp/htdocs/eric_install/public>
+        DirectoryIndex index.php
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+    </Directory>
+</VirtualHost>

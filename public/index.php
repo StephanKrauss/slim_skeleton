@@ -28,6 +28,10 @@
 	    $actionName = $actionName.'Action';
 	    $controller->$actionName();
 
+		return $this->view->render($response, 'index.html', [
+	        'name' => 'Stephan Krauss'
+	    ]);
+
 	     return $response;
 	});
 
