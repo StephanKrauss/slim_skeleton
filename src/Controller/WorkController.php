@@ -53,7 +53,10 @@
 				$result = array();
 
 				$result['person'] = $person;
-			} catch(Exception $e){
+
+				return $result;
+			}
+			catch(Exception $e){
 				// Rollback
 				throw $e;
 			}

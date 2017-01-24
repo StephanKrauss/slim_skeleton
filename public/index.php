@@ -16,8 +16,10 @@
 	$container = $app->getContainer();
 	include_once('../src/container.php');
 
-	$app->any('/[{controller}/{action}/]', function (Request $request, Response $response, $params) use($container)
+	$app->get('/[{controller}/{action}/]', function (Request $request, Response $response, $params) use($container)
 	{
+		$templatName = $params['controller'].'.html';
+
 	    $controllerName = $params['controller'].'Controller';
 	    $controllerName = ucfirst($controllerName);
 	    $controllerName = '\\App\\Controller\\'.$controllerName;
@@ -26,13 +28,25 @@
 
 	    $actionName = $params['action'];
 	    $actionName = $actionName.'Action';
-	    $controller->$actionName();
+	    $result = $controller->$actionName();
 
-		return $this->view->render($response, 'index.html', [
-	        'name' => 'Stephan Krauss'
-	    ]);
+		return $this->view->render($response, $templatName, $result);
+	});
 
-	     return $response;
+	$app->map(['POST','PUT','DELETE'], '/[{controller}/{action}/]', function (Request $request, Response $response, $params) use($container){
+			$controllerName = $params['controller'].'Controller';
+		    $controllerName = ucfirst($controllerName);
+		    $controllerName = '\\App\\Controller\\'.$controllerName;
+
+		    $controller = new $controllerName($container);
+
+		    $actionName = $params['action'];
+		    $actionName = $actionName.'Action';
+		    $result = $controller->$actionName();
+
+			$newResponse = $response->withJson($result);
+
+			return $newResponse;
 	});
 
 	$app->run();
