@@ -16,7 +16,7 @@
 	$container = $app->getContainer();
 	include_once('../src/container.php');
 
-	$app->get('/[{controller}/{action}/]', function (Request $request, Response $response, $params) use($container)
+	$app->get('/[{controller}/{action}/[{bla:.*}]]', function (Request $request, Response $response, $params) use($container)
 	{
 		$templatName = $params['controller'].'.html';
 
