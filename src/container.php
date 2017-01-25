@@ -38,6 +38,9 @@
 	// Mapper
 
 	// Service
+	$container[\App\Service\servicePersonalData::class] = function($c){
+		return new \App\Service\servicePersonalData($c);
+	};
 
 	// Manually (in the end of script!)
 	// $dumper = new PimpleDumper();

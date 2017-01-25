@@ -24,7 +24,12 @@
 	    $controllerName = ucfirst($controllerName);
 	    $controllerName = '\\App\\Controller\\'.$controllerName;
 
-	    $controller = new $controllerName($container);
+	    $startParams = array(
+	    	'bla' => 'bla',
+			'blub' => 'blub'
+		);
+
+	    $controller = new $controllerName($container, $startParams);
 
 	    $actionName = $params['action'];
 	    $actionName = $actionName.'Action';
