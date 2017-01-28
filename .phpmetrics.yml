@@ -12,10 +12,10 @@ default:
 
     logging:
         report:
-            xml:    ./log/phpmetrics.xml
-            html:   ./log/phpmetrics.html
-            csv:    ./log/phpmetrics.csv
+            xml:    ./_log/phpmetrics.xml
+            html:   ./_log/phpmetrics.html
+            csv:    ./_log/phpmetrics.csv
         violations:
-            xml:    ./log/violations.xml
+            xml:    ./_log/violations.xml
         chart:
-            bubbles: ./log/bubbles.svg
+            bubbles: ./_log/bubbles.svg
