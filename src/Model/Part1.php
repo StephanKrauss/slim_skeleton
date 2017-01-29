@@ -34,8 +34,16 @@
 			// $this->container = $container;
 		}
 
-		public function methode1($aaa, $bbb, $ccc){
-
+		public function methode1($aaa){
+            return $aaa;
 		}
+
+		public function methode2($bbb){
+		    return $bbb;
+        }
+
+        public function methode3($ccc){
+		    return $ccc;
+        }
 
 	} // end class

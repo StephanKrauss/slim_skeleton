@@ -20,10 +20,26 @@
 
 		public function setUp()
 		{
-			$container=new \Slim\Container();
-			$container[\App\Model\Part1::class] = true;
+			$container = new \Slim\Container();
+            include_once('./src/container.php');
 
-			$this->class=new \App\Controller\WorkController($container);
+            $notMockObjectsMethods = [];
+            $notMockObjectsMethods[\App\Model\Part1::class] = ['methode2'];
+
+            foreach($container->values as $key => $value){
+                if(!strstr($key,'App\\'))
+                    continue;
+                else{
+                    $mock = $this->getMockBuilder($key);
+
+                    $container[$key] = $mock;
+                }
+
+            }
+
+
+
+			$this->class = new \App\Controller\WorkController($container);
 		}
 
 		public function testSluggifyReturnsSluggifiedString()
