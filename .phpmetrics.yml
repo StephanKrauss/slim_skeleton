@@ -1,14 +1,14 @@
 default:
     rules:
-        cyclomaticComplexity: [ 10, 6, 2 ]
-        maintainabilityIndex: [ 0, 95, 99 ]
+        cyclomaticComplexity: [ 10, 9, 5 ]
+        maintainabilityIndex: [ 1, 2, 99 ]
 
     failure: average.maintainabilityIndex < 50 or sum.loc > 10000
 
     path:
         directory: src
         extensions: php
-        exclude: features|tests
+        exclude: test
 
     logging:
         report:
